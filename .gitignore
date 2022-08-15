@@ -1,0 +1,8 @@
+resource/*.*
+/venv/
+module/
+dist/
+build/
+bean_raw/*.*
+__pycache__/
+.idea/
