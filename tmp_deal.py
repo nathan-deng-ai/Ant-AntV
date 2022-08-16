@@ -9,8 +9,8 @@ from common.project_path import project_path
 
 
 def main():
-    with open(project_path.add_abs_path("./step2.py"), "r+",encoding="utf-8") as f1:
-        with open(project_path.add_abs_path("./resource/shellcode_cipher.tmp"), "rb") as f2:
+    with open(project_path.add_abs_path("/step2.py"), "r+", encoding="utf-8") as f1:
+        with open(project_path.add_abs_path("/resource/shellcode_cipher.tmp"), "rb") as f2:
             step2 = f1.read()
             # print(step2)
             shellcode_cipher = f2.read()

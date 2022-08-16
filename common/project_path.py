@@ -10,11 +10,11 @@ class ProjectPath:
 
     @staticmethod
     def get_resource_path():
-        return join(project_path.get_project_path(),"./resource/")
+        return join(project_path.get_project_path(), "./resource/")
 
     @staticmethod
     def add_abs_path(r_path):
-        return ProjectPath.get_project_path() + "./" + r_path
+        return ProjectPath.get_project_path()  + r_path
 
 
 project_path = ProjectPath()

