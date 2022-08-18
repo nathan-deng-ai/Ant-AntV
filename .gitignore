@@ -6,3 +6,4 @@ build/
 bean_raw/*.*
 __pycache__/
 .idea/
+step2.py
